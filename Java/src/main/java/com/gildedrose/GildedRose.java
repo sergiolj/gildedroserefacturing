@@ -1,5 +1,10 @@
 package com.gildedrose;
 
+
+enum itemType{
+	LEGENDARY, QUALITY_WITH_AGE, REGULAR
+}
+
 class GildedRose {
     Item[] items;
 
@@ -58,5 +63,15 @@ class GildedRose {
                 }
             }
         }
+    }
+    
+    public itemType classify(Item item) {
+    	if(item.name.equals("Aged Brie") || item.name.equals("Backstage passes to a TAFKAL80ETC concert")){
+    		return itemType.QUALITY_WITH_AGE;
+    	}
+    	if(item.name.equals("Sulfuras, Hand of Ragnaros")){
+    		return itemType.LEGENDARY;
+    	}
+    	return itemType.REGULAR;
     }
 }
