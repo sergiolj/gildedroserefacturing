@@ -1,11 +1,11 @@
 package com.gildedrose.strategy;
 
-public enum DecreaseRates {
-	REGULAR(1), DOUBLE(2);
+public enum UpdateRates {
+	REGULAR(1), DOUBLE(2), TRIPPLE(3);
 	
 	private final int value;
 	
-	private DecreaseRates(int value) {
+	private UpdateRates(int value) {
 		this.value = value;
 	}
 	
